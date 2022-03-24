@@ -3,21 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-decorators": "^7.17.8",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.26.1",
-    "node-sass": "^7.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "styled-components": "^5.3.3",
-    "web-vitals": "^2.1.4"
+    "axios": "~0.26.1",
+    "core-decorators": "~0.20.0",
+    "customize-cra": "~1.0.0",
+    "html-react-parser": "^1.4.9",
+    "lodash": "~4.17.21",
+    "mobx": "~4.7.0",
+    "mobx-react": "~6.0.2",
+    "node-sass": "~7.0.1",
+    "prop-types": "~15.8.1",
+    "qs": "~6.10.3",
+    "react": "~16.14.0",
+    "react-app-rewired": "~2.2.1",
+    "react-dom": "~16.14.0",
+    "react-is": "~16.13.1",
+    "react-router": "~5.2.0",
+    "react-router-dom": "~5.2.0",
+    "react-scripts": "~5.0.0",
+    "styled-components": "~5.3.3",
+    "styled-reset": "~4.3.4",
+    "web-vitals": "~2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,6 +51,25 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
     ]
   }
 }
